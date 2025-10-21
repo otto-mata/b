@@ -6,8 +6,8 @@ BISON_FLAGS := -d
 $(TARGET): b.tab.c lex.yy.c
 	gcc $^ -o $@
 
-lex.yy.c: $(b.l)
-	flex $^
+lex.yy.c: $(FLEX_SRC) b.tab.h
+	flex $<
 
-b.tab.c: $(BISON_SRC)
+b.tab.c b.tab.h: $(BISON_SRC)
 	bison $(BISON_FLAGS) $^ 
