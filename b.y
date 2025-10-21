@@ -14,7 +14,8 @@ void yyerror(const char *s);
 %right UNARY_OP
 %left INC DEC
 %right AMPERSAND
-
+%nonassoc RPAREN
+%nonassoc KW_ELSE
 %%
 
 program

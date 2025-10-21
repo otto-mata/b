@@ -1,6 +1,6 @@
 %{
 #include <stdio.h>
-#include "b_parser.tab.h"
+#include "b.tab.h"
 %}
 
 alpha			[a-zA-Z_\b]
